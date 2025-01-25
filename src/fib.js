@@ -6,3 +6,5 @@ function fib(n) {
   } else {
   }
 }
+
+export default fib;
