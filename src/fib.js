@@ -1,10 +1,19 @@
 function fib(n) {
-  if (n < 1) return [];
-
-  if (n <= 2) {
-    return [0, 1];
+  if (n <= 1) {
+    console.log(n);
+    return n;
   } else {
+    return fib(n - 1) + fib(n - 2);
   }
 }
 
-export default fib;
+function makeFibArr(n) {
+  let nums = [];
+  for (let i = 0; i < n; i++) {
+    const x = fib(i);
+    nums.push(x);
+  }
+  return nums;
+}
+
+export default makeFibArr;
