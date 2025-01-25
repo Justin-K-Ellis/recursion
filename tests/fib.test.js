@@ -17,4 +17,12 @@ describe("make an array of nums in the fibonacci sequence", () => {
   test("input n = 8", () => {
     expect(makeFibArr(8)).toStrictEqual([0, 1, 1, 2, 3, 5, 8, 13]);
   });
+
+  test("input n = 1", () => {
+    expect(makeFibArr(1)).toStrictEqual([0]);
+  });
+
+  test("input n = 0", () => {
+    expect(makeFibArr(0)).toStrictEqual([]);
+  });
 });
