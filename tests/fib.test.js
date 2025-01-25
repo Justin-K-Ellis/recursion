@@ -19,4 +19,8 @@ describe("fibonacci sequence", () => {
   test("input of 4", () => {
     expect(fib(4)).toStrictEqual([0, 1, 1, 2]);
   });
+
+  test("input of 8", () => {
+    expect(fib(8)).toStrictEqual([0, 1, 1, 2, 3, 5, 8, 13]);
+  });
 });
