@@ -1,6 +1,5 @@
 function fib(n) {
   if (n <= 1) {
-    console.log(n);
     return n;
   } else {
     return fib(n - 1) + fib(n - 2);
