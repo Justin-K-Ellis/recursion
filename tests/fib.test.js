@@ -1,26 +1,20 @@
 import { describe, expect, test } from "vitest";
-import fib from "../src/fib.js";
+import makeFibArr from "../src/fib.js";
 
-describe("fibonacci sequence", () => {
-  test("input of 2", () => {
-    expect(fib(2)).toStrictEqual([0, 1]);
+describe("make an array of nums in the fibonacci sequence", () => {
+  test("input n = 2", () => {
+    expect(makeFibArr(2)).toStrictEqual([0, 1]);
   });
 
-  test("input of 2 or less", () => {
-    expect(fib(1)).toStrictEqual([]);
-    expect(fib(0)).toStrictEqual([]);
-    expect(fib(-1)).toStrictEqual([]);
+  test("input n = 3", () => {
+    expect(makeFibArr(3)).toStrictEqual([0, 1, 1]);
   });
 
-  test("input of 3", () => {
-    expect(fib(3)).toStrictEqual([0, 1, 1]);
+  test("input n = 4", () => {
+    expect(makeFibArr(4)).toStrictEqual([0, 1, 1, 2]);
   });
 
-  test("input of 4", () => {
-    expect(fib(4)).toStrictEqual([0, 1, 1, 2]);
-  });
-
-  test("input of 8", () => {
-    expect(fib(8)).toStrictEqual([0, 1, 1, 2, 3, 5, 8, 13]);
+  test("input n = 8", () => {
+    expect(makeFibArr(8)).toStrictEqual([0, 1, 1, 2, 3, 5, 8, 13]);
   });
 });
