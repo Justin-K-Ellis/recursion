@@ -3,8 +3,6 @@ function mergeSort(arr) {
     return arr;
   } else {
     const [leftArr, rightArr] = splitArray(arr);
-    // call merge sort on each half
-    // merge sorted arrs
     return mergeArrs(mergeSort(leftArr), mergeSort(rightArr));
   }
 }
@@ -41,7 +39,5 @@ function mergeArrs(arr1, arr2) {
 
   return returnArray;
 }
-
-mergeSort([105, 79, 100, 110]);
 
 export { mergeSort, splitArray, mergeArrs };
